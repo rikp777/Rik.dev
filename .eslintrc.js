@@ -1,5 +1,5 @@
 module.exports = {
-  root: true,
+  root: false,
   env: {
     node: true
   },
@@ -21,5 +21,6 @@ module.exports = {
         jest: true
       }
     }
-  ]
+  ],
+  lintOnSave: false
 };
