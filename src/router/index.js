@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import error from "./routes/error";
-import permissions from "./routes/permissions";
 
 Vue.use(VueRouter);
 
@@ -14,7 +13,7 @@ const routes = [
         path: "/",
         name: "_home",
         redirect: "/home",
-        component: () => import('../components/base/Main'),
+        component: () => import('../components/layout/Main'),
         children: [
             {
                 path: "/home",
@@ -24,8 +23,6 @@ const routes = [
         ]
 
     },
-
-    ...permissions,
     ...error
 ]
 

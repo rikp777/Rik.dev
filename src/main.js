@@ -5,19 +5,26 @@ import "./registerServiceWorker";
 
 import router from "./router";
 import store from "./store";
+import "./plugins"
 
-import './plugins'
-import colxx from './components/common/Colxx'
+import ApiService from "./services/api.service";
 
-if (process.env.NODE_ENV === "production") {
-} else {
+ApiService.initialize();
+
+let MOCK = true
+if (process.env.NODE_ENV === "development") {
   Vue.config.productionTip = false;
   Vue.config.devtools = true;
   Vue.config.performance = true;
+
+
+  if (MOCK) {
+    let mirage = require("./mock/mirage/server")
+    mirage.createServer();
+  }
 }
 
 
-Vue.component('b-colxx', colxx);
 
 //AccessControlService.router(store, router);
 

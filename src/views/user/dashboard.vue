@@ -1,8 +1,13 @@
 <template>
-    <router-view></router-view>
+    
 </template>
+
 <script>
     export default {
-        name: "Layout"
-    };
+        name: "dashboard"
+    }
 </script>
+
+<style scoped>
+
+</style>

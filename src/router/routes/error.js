@@ -1,4 +1,4 @@
-import Layout from "../../views/base/Layout";
+import Layout from "../../components/layout/Main";
 
 export default [
   {
